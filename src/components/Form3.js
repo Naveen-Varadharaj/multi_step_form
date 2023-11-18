@@ -21,7 +21,7 @@ export default function Form3(props) {
         
         <input className='py-1 px-1 w-full rounded-lg' type='text'  value={formdata.skills} onChange={(event)=>setFormdata({...formdata,skills:event.target.value})}  />
         
-        <label>Languages </label>
+        <label>Languages Known </label>
         
         <input className='py-1 px-1 w-full rounded-lg' type='text' value={formdata.languages} onChange={(event)=>setFormdata({...formdata,languages:event.target.value})}  />
         </>)
@@ -32,7 +32,7 @@ export default function Form3(props) {
         
         <input className='py-1 px-1 w-full rounded-lg' type='text' value={formdata.prelocation} onChange={(event)=>setFormdata({...formdata,prelocation:event.target.value})} />
         
-        <label>Notice Period</label>
+        <label>Notice Period in days</label>
         
         <input className='py-1 px-1 w-full rounded-lg' type='number' value={formdata.np} onChange={(event)=>setFormdata({...formdata,np:event.target.value})} />
         
