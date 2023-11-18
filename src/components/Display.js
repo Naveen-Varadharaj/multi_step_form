@@ -137,7 +137,7 @@ export default function Display() {
                 
             </tr>
             <tr>
-                <td className='border border-black py-3 text-center px-2'>Languages</td>
+                <td className='border border-black py-3 text-center px-2'>Languages Known</td>
                 <td className='border border-black py-3 text-center px-2'>{formdata.languages}</td>
                 
             </tr>
@@ -147,7 +147,7 @@ export default function Display() {
                 
             </tr>
             <tr>
-                <td className='border border-black py-3 text-center px-2'>Notice Period</td>
+                <td className='border border-black py-3 text-center px-2'>Notice Period in days</td>
                 <td className='border border-black py-3 text-center px-2'>{formdata.np}</td>
                 
             </tr>
