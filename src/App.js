@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import Form1 from './components/Form1';
+import Form2 from './components/Form2';
+import Form3 from './components/Form3';
+import { useState , createContext } from 'react';
+import './index.css';
 
+export const UserContext = createContext()
 function App() {
+  const[currForm, setCurrform]=useState("form1");
+  const[formdata, setFormdata]=useState({
+    firstname:"",
+    lastname:"",
+    phone:"",
+    email:"",
+    address:"",
+    age:"",
+    degree:"",
+    branch:"",
+    college:"",
+    passedout:"",
+    precompany:"",
+    experience:"",
+    skills:"",
+    languages:"",
+    prelocation:"",
+    np:"",
+    cursalary:"",
+    expsalary:""
+  })
+  const toogleForm=(formName)=>{
+    setCurrform(formName)
+ }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <UserContext.Provider value={[formdata, setFormdata]}>
+    <div className="mx-auto my-auto grid place-content-center">
+       {currForm ==="form1"? <Form1 onFormSwitch={toogleForm}/>: (currForm ==="form2"? <Form2 onFormSwitch={toogleForm}/>:<Form3 onFormSwitch={toogleForm}/>)}
     </div>
+    </UserContext.Provider>
   );
 }
 
 export default App;
+
